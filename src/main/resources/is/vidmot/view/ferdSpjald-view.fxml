@@ -4,13 +4,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="110.0" prefWidth="230.0" type="is.vidmot.view.FerdSpjald" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="110.0" prefWidth="230.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="5.0" layoutY="5.0" prefHeight="30.0" prefWidth="75.0" text="Heiti ferðar" />
       <Label layoutX="5.0" layoutY="40.0" prefHeight="30.0" prefWidth="75.0" text="Áfangastaður" />
       <Label layoutX="5.0" layoutY="75.0" prefHeight="30.0" prefWidth="75.0" text="Dagsetning" />
-      <TextField fx:id="fxHeiti" layoutX="75.0" layoutY="5.0" prefHeight="30.0" prefWidth="150.0" />
-      <TextField fx:id="fxAfangastadur" layoutX="75.0" layoutY="40.0" prefHeight="30.0" prefWidth="150.0" />
-      <TextField fx:id="fxDagsetning" layoutX="75.0" layoutY="75.0" prefHeight="30.0" prefWidth="150.0" />
+      <TextField fx:id="fxHeiti" layoutX="75.0" layoutY="5.0" prefHeight="30.0" prefWidth="210.0" />
+      <TextField fx:id="fxAfangastadur" layoutX="75.0" layoutY="40.0" prefHeight="30.0" prefWidth="210.0" />
+      <TextField fx:id="fxDagsetning" layoutX="75.0" layoutY="75.0" prefHeight="30.0" prefWidth="210.0" />
    </children>
 </fx:root>

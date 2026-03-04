@@ -16,6 +16,7 @@ module ModuleNafn {
     
     exports is.vidmot.controller;
     exports is.vidmot.switcher;
+    exports is.vidmot.view;
     exports is.vidmot;
     exports is.vinnsla;
 }

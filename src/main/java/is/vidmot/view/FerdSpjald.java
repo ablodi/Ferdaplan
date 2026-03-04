@@ -27,7 +27,7 @@ public class FerdSpjald extends AnchorPane {
 	
 	
 	public FerdSpjald() {
-		FXMLLoader fxmlLoader = new FXMLLoader(FerdSpjald.class.getResource("/is/vidmot/ferdSpjald-view.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(FerdSpjald.class.getResource("/is/vidmot/view/ferdSpjald-view.fxml"));
 		fxmlLoader.setRoot(this);
 		fxmlLoader.setController(this);
 		try {

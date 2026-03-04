@@ -6,10 +6,12 @@ import is.vinnsla.Ferd;
 import is.vinnsla.Ferdaplan;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /******************************************************************************
  *  Nafn    :
@@ -43,7 +45,11 @@ public class AdalController {
 	private void onSkoda(ActionEvent e) {
 		Ferd f = fxFerdalisti.getSelectionModel().getSelectedItem();
 		System.out.println(f + "\n" + View.FERD.getFileName());
+		Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
 		ViewSwitcher.switchTo(View.FERD, false, f);;
+		
+		// Breyti stærðinni á glugganum eftir að ég ýti á skoða
+		stage.setHeight(145.0); stage.setWidth(300.0); stage.centerOnScreen();
 	}
 }
 
