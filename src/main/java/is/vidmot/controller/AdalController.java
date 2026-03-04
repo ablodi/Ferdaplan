@@ -6,9 +6,10 @@ import is.vinnsla.Ferd;
 import is.vinnsla.Ferdaplan;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.Pane;
 
 /******************************************************************************
  *  Nafn    :
@@ -38,9 +39,12 @@ public class AdalController {
 		fxEyda.disableProperty().bind(
 				fxFerdalisti.getSelectionModel().selectedItemProperty().isNull());
 	}
-	
+	@FXML
 	private void onSkoda(ActionEvent e) {
 		Ferd f = fxFerdalisti.getSelectionModel().getSelectedItem();
+		System.out.println(f + "\n" + View.FERD.getFileName());
+		var sena = new Scene(new Pane());
+		ViewSwitcher.setScene(sena);
 		ViewSwitcher.switchTo(View.FERD, false, f);;
 	}
 }

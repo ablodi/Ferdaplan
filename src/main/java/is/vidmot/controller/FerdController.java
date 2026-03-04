@@ -1,13 +1,21 @@
 package is.vidmot.controller;
 
+import is.vidmot.FerdaplanApp;
+import is.vidmot.switcher.View;
+import is.vidmot.switcher.ViewSwitcher;
+import is.vidmot.view.FerdSpjald;
 import is.vinnsla.Ferd;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class FerdController implements GognInterface<Ferd> {
+	@FXML
+	private FerdSpjald fxFerdSpjald;
 	@FXML
 	private Label fxHeiti;
 	@FXML
@@ -17,7 +25,6 @@ public class FerdController implements GognInterface<Ferd> {
 	@FXML
 	private Button fxTilBaka;
 	
-	private Scene sena;
     /**
      * Frumstillir controllerinn
      */
@@ -28,25 +35,14 @@ public class FerdController implements GognInterface<Ferd> {
 
 	@Override
 	public void setGogn(Ferd f) {
-		// TODO Auto-generated method stub
-		
+		fxFerdSpjald.heitiProperty().bind(f.heitiProperty());
+		fxFerdSpjald.afangastadurProperty().bind(f.afangastadurProperty());
+		fxFerdSpjald.dagsetningProperty().bind(f.dagsetningProperty());
 	}
-    /**
-     * Birtir gluggann með námskeiði í
-     * @param namskeid námskeiðið
-     */
-    public void birtaGluggi(Ferd f) {
-        // setja gögn í viðmótshlutina í tilviksbreytunum
-        fxHeiti.setText(f.getHeiti());
-        fxAfangastadur.setText(f.getAfangastadur());
-        fxDagsetning.setText(f.getDagsetning());
-
-        // Búa til glugga
-        Stage gluggi = new Stage();
-        // tengja senu við glugga - hér er senan geymd en ekki búin til í hvert skipti
-        gluggi.setScene(sena);
-        // sýna glugga - non-modal
-        gluggi.show();
-    }
+	
+	@FXML
+	private void onAdal(ActionEvent e) {
+		ViewSwitcher.switchTo(View.ADAL);
+	}
 }
 	

@@ -13,7 +13,7 @@ Notendaviðmót fyrir grunn
       <ListView fx:id="fxFerdalisti" prefHeight="400.0" prefWidth="200.0" />
     <AnchorPane layoutX="225.0" layoutY="156.0" minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="150.0">
          <children>
-            <Button fx:id="fxSkoda" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Skoða" />
+            <Button fx:id="fxSkoda" onAction="#onSkoda" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Skoða" />
             <Button fx:id="fxBaeta" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Bæta við" />
             <Button fx:id="fxEyda" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Eyða" />
          </children>

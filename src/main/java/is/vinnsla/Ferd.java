@@ -28,5 +28,13 @@ public class Ferd {
 	public String getDagsetning() {
 		return this.dagsetning.get();
 	}
-	
+	public SimpleStringProperty heitiProperty() {
+		return heitiFerdar;
+	}
+	public SimpleStringProperty afangastadurProperty() {
+		return afangastadur;
+	}
+	public SimpleStringProperty dagsetningProperty() {
+		return dagsetning;
+	}
 }
