@@ -8,6 +8,7 @@ import is.vinnsla.Ferd;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -42,7 +43,9 @@ public class FerdController implements GognInterface<Ferd> {
 	
 	@FXML
 	private void onAdal(ActionEvent e) {
+		Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
 		ViewSwitcher.switchTo(View.ADAL);
+		stage.setHeight(400.0); stage.setWidth(400.0); stage.centerOnScreen();
 	}
 }
 	

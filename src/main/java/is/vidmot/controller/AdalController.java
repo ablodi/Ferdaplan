@@ -49,7 +49,7 @@ public class AdalController {
 		ViewSwitcher.switchTo(View.FERD, false, f);;
 		
 		// Breyti stærðinni á glugganum eftir að ég ýti á skoða
-		stage.setHeight(145.0); stage.setWidth(300.0); stage.centerOnScreen();
+		stage.setHeight(185.0); stage.setWidth(310.0); stage.centerOnScreen();
 	}
 }
 
