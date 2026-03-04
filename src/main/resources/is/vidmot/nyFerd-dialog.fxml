@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import is.vidmot.view.FerdSpjald?>
+<?import javafx.scene.control.DialogPane?>
+
+
+<DialogPane prefHeight="120.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <header>
+      <FerdSpjald prefWidth="285.0" />
+   </header>
+</DialogPane>

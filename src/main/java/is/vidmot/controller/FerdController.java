@@ -45,6 +45,7 @@ public class FerdController implements GognInterface<Ferd> {
 	private void onAdal(ActionEvent e) {
 		Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
 		ViewSwitcher.switchTo(View.ADAL);
+		// Breyti stærðinni á glugganum eftir að ég ýti á skoða
 		stage.setHeight(400.0); stage.setWidth(400.0); stage.centerOnScreen();
 	}
 }
