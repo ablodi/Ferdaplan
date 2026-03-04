@@ -1,5 +1,6 @@
 package is.vidmot;
 
+import is.vidmot.switcher.ViewSwitcher;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -29,6 +30,7 @@ public class FerdaplanApp extends javafx.application.Application {
         stage.setTitle("Titill");
         // Tengja senuna við glugggann
         stage.setScene(scene);
+        ViewSwitcher.setScene(scene);
         // Birta gluggann
         stage.show();
     }

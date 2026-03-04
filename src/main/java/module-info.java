@@ -10,6 +10,7 @@ module ModuleNafn {
     requires javafx.controls;
 	requires javafx.graphics;
     opens is.vidmot to javafx.fxml;
+    opens is.vidmot.view to javafx.fxml;
     opens is.vidmot.controller to javafx.fxml;
     opens is.vidmot.switcher to javafx.fxml;
     

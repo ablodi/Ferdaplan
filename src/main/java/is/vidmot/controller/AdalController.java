@@ -43,8 +43,6 @@ public class AdalController {
 	private void onSkoda(ActionEvent e) {
 		Ferd f = fxFerdalisti.getSelectionModel().getSelectedItem();
 		System.out.println(f + "\n" + View.FERD.getFileName());
-		var sena = new Scene(new Pane());
-		ViewSwitcher.setScene(sena);
 		ViewSwitcher.switchTo(View.FERD, false, f);;
 	}
 }
