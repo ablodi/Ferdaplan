@@ -35,6 +35,7 @@ public class FerdController implements GognInterface<Ferd> {
 		fxFerdSpjald.dagsetningProperty().bind(f.dagsetningProperty());
 	}
 	
+	
 	@FXML
 	private void onAdal(ActionEvent e) {
 		Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
