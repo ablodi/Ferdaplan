@@ -13,6 +13,8 @@ public class Ferd {
 		this.dagsetning.set(dagsetning);
 	}
 	
+	public Ferd() {}
+
 	@Override
 	public String toString() {
 		return heitiFerdar.get() + ":" + afangastadur.get() + ":" + dagsetning.get();

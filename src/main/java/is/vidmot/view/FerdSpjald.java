@@ -10,12 +10,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 public class FerdSpjald extends AnchorPane {
-	
-	private Ferd ferd;
+	/*
 	private final SimpleStringProperty heiti = new SimpleStringProperty();
 	private final SimpleStringProperty afangastadur = new SimpleStringProperty();
 	private final SimpleStringProperty dagsetning = new SimpleStringProperty();
-	
+	*/
 	@FXML
 	private TextField fxHeiti;
 	
@@ -36,6 +35,7 @@ public class FerdSpjald extends AnchorPane {
 			throw new RuntimeException(e);
 		}
 	}
+	/*
 	@FXML
 	public void initialize() {
 		fxHeiti.textProperty().bind(heiti);
@@ -48,14 +48,15 @@ public class FerdSpjald extends AnchorPane {
 		afangastadur.set(ferd.getAfangastadur());
 		dagsetning.set(ferd.getDagsetning());
 	}
+	*/
 	
 	public SimpleStringProperty heitiProperty() {
-		return heiti;
+		return (SimpleStringProperty) fxHeiti.textProperty();
 	}
 	public SimpleStringProperty afangastadurProperty() {
-		return afangastadur;
+		return (SimpleStringProperty) fxAfangastadur.textProperty();
 	}
 	public SimpleStringProperty dagsetningProperty() {
-		return dagsetning;
+		return (SimpleStringProperty) fxDagsetning.textProperty();
 	}
 }

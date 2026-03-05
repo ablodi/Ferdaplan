@@ -16,15 +16,20 @@ public class FerdDialogController implements GognInterface<Ferd> {
 	@FXML
 	private FerdSpjald fxFerdSpjald;
 	
-	SimpleStringProperty heiti = new SimpleStringProperty();
-	SimpleStringProperty afangastadur = new SimpleStringProperty();
-	SimpleStringProperty dagsetning = new SimpleStringProperty();
+	Ferd ferd;
+	
 	
 	@Override
 	public void setGogn(Ferd f) {
+		this.ferd = f;
 		fxFerdSpjald.heitiProperty().bind(f.heitiProperty());
 		fxFerdSpjald.afangastadurProperty().bind(f.afangastadurProperty());
 		fxFerdSpjald.dagsetningProperty().bind(f.dagsetningProperty());
+		
+	}
+	
+	public Ferd getFerd() {
+		return ferd;
 	}
 
 }

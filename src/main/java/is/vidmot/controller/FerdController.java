@@ -17,15 +17,7 @@ import javafx.stage.Stage;
 public class FerdController implements GognInterface<Ferd> {
 	@FXML
 	private FerdSpjald fxFerdSpjald;
-	@FXML
-	private Label fxHeiti;
-	@FXML
-	private Label fxAfangastadur;
-	@FXML
-	private Label fxDagsetning;
-	@FXML
-	private Button fxTilBaka;
-	
+	private Ferd ferd;
     /**
      * Frumstillir controllerinn
      */
@@ -36,6 +28,8 @@ public class FerdController implements GognInterface<Ferd> {
 
 	@Override
 	public void setGogn(Ferd f) {
+		
+		this.ferd = f;
 		fxFerdSpjald.heitiProperty().bind(f.heitiProperty());
 		fxFerdSpjald.afangastadurProperty().bind(f.afangastadurProperty());
 		fxFerdSpjald.dagsetningProperty().bind(f.dagsetningProperty());
