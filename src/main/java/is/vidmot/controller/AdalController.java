@@ -1,5 +1,7 @@
 package is.vidmot.controller;
 
+import java.util.Optional;
+
 import is.vidmot.switcher.View;
 import is.vidmot.switcher.ViewSwitcher;
 import is.vinnsla.Ferd;
@@ -50,6 +52,14 @@ public class AdalController {
 		
 		// Breyti stærðinni á glugganum eftir að ég ýti á skoða
 		stage.setHeight(185.0); stage.setWidth(310.0); stage.centerOnScreen();
+	}
+	@FXML
+	private void onBaetaVid(ActionEvent e) {
+		Optional<Ferd> result = FerdDialogWrapper.birtaDialog(
+				((Node) e.getSource()).getScene().getWindow());
+		result.ifPresent(f -> {
+			if(f.erValid()) ferdaplan.getListi().add(f);
+		});
 	}
 }
 

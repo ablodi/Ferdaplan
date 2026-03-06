@@ -9,6 +9,7 @@ module ModuleNafn {
     requires javafx.fxml;
     requires javafx.controls;
 	requires javafx.graphics;
+	requires transitive javafx.base;
     opens is.vidmot to javafx.fxml;
     opens is.vidmot.view to javafx.fxml;
     opens is.vidmot.controller to javafx.fxml;

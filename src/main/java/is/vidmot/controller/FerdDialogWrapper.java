@@ -16,7 +16,7 @@ public class FerdDialogWrapper {
 	public static Optional<Ferd> birtaDialog(Window owner) {
 		
 		// setur upp FXML loader
-		FXMLLoader fxmlLoader = new FXMLLoader(FerdDialogWrapper.class.getResource("personDialog-view.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(FerdDialogWrapper.class.getResource("/is/vidmot/nyFerd-dialog.fxml"));
         try {
         	
         	// Lesa inn .fxml fyrir DialogPane með loader og sækja controller úr loader 
@@ -29,6 +29,8 @@ public class FerdDialogWrapper {
         	
         	// Búa til dialog og tengja við pane og owner
         	Dialog<Ferd> d = new Dialog<>();
+        	d.setTitle("Bæta við ferð");
+        	d.setDialogPane(dp);
         	d.initOwner(owner);
         	
         	// Skrifa resultConverter sem skilar Ferd og tengja við dialog

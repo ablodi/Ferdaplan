@@ -3,9 +3,9 @@ package is.vinnsla;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Ferd {
-	SimpleStringProperty heitiFerdar = new SimpleStringProperty();
-	SimpleStringProperty afangastadur = new SimpleStringProperty();
-	SimpleStringProperty dagsetning = new SimpleStringProperty();
+	SimpleStringProperty heitiFerdar = new SimpleStringProperty("");
+	SimpleStringProperty afangastadur = new SimpleStringProperty("");
+	SimpleStringProperty dagsetning = new SimpleStringProperty("");
 	
 	public Ferd(String heitiFerdar, String afangastadur, String dagsetning) {
 		this.heitiFerdar.set(heitiFerdar);
@@ -38,5 +38,15 @@ public class Ferd {
 	}
 	public SimpleStringProperty dagsetningProperty() {
 		return dagsetning;
+	}
+	/**
+	 * Athugar hvort einhver field sé tómur
+	 * @return false ef það vantar einhvert property, annars true
+	 */
+	public boolean erValid() {
+		return
+				heitiProperty().get() != null && !heitiProperty().get().isBlank()
+				&& afangastadurProperty().get() != null && !afangastadurProperty().get().isBlank()
+				&& dagsetningProperty().get() != null && !dagsetningProperty().get().isBlank();
 	}
 }

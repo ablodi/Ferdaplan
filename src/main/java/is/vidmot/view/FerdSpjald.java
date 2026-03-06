@@ -3,7 +3,9 @@ package is.vidmot.view;
 import java.io.IOException;
 
 import is.vinnsla.Ferd;
+import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
@@ -49,14 +51,17 @@ public class FerdSpjald extends AnchorPane {
 		dagsetning.set(ferd.getDagsetning());
 	}
 	*/
-	
-	public SimpleStringProperty heitiProperty() {
-		return (SimpleStringProperty) fxHeiti.textProperty();
+	/**
+	 * Vista property frá viðmótshlutum til þess að geta gert typecast
+	 * úr StringProperty yfir í SimpleStringProperty
+	 */
+	public StringProperty heitiProperty() {
+		return fxHeiti.textProperty();
 	}
-	public SimpleStringProperty afangastadurProperty() {
-		return (SimpleStringProperty) fxAfangastadur.textProperty();
+	public StringProperty afangastadurProperty() {
+		return fxAfangastadur.textProperty();
 	}
-	public SimpleStringProperty dagsetningProperty() {
-		return (SimpleStringProperty) fxDagsetning.textProperty();
+	public StringProperty dagsetningProperty() {
+		return fxDagsetning.textProperty();
 	}
 }
