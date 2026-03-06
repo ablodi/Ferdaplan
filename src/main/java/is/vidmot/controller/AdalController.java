@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -33,7 +34,8 @@ public class AdalController {
 	@FXML
 	private Button fxEyda;
 	
-	private Ferdaplan ferdaplan = new Ferdaplan();
+	private static final Ferdaplan ferdaplan = new Ferdaplan();
+	
 	
 	
 	public void initialize() {
@@ -43,6 +45,7 @@ public class AdalController {
 		fxEyda.disableProperty().bind(
 				fxFerdalisti.getSelectionModel().selectedItemProperty().isNull());
 	}
+	
 	@FXML
 	private void onSkoda(ActionEvent e) {
 		Ferd f = fxFerdalisti.getSelectionModel().getSelectedItem();
@@ -60,6 +63,14 @@ public class AdalController {
 		result.ifPresent(f -> {
 			if(f.erValid()) ferdaplan.getListi().add(f);
 		});
+	}
+	@FXML
+	private void onEyda(ActionEvent e) {
+		Optional<ButtonType> result = StadfestingController.birtaGlugga();
+		if(result.isPresent() && result.get() == ButtonType.OK) {
+			fxFerdalisti.getItems().remove(
+					fxFerdalisti.getSelectionModel().getSelectedIndex());
+		}
 	}
 }
 

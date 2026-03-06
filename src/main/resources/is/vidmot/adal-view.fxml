@@ -15,7 +15,7 @@ Notendaviðmót fyrir grunn
          <children>
             <Button fx:id="fxSkoda" onAction="#onSkoda" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Skoða" />
             <Button fx:id="fxBaeta" onAction="#onBaetaVid" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Bæta við" />
-            <Button fx:id="fxEyda" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Eyða" />
+            <Button fx:id="fxEyda" onAction="#onEyda" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Eyða" />
          </children>
       </AnchorPane>
    </children>
