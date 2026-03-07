@@ -14,7 +14,7 @@ import javafx.scene.control.DialogPane;
  *
  * @author Kristinn Óskarsson
  */
-public class StadfestingController {
+public class StadfestingEydaDialogController {
 	
 	/**
 	 * Nota Alert fyrir staðfestingu á því að eyða
@@ -23,7 +23,7 @@ public class StadfestingController {
 	 */
 	public static Optional<ButtonType> birtaGlugga() {
 		try {
-			FXMLLoader loader = new FXMLLoader(StadfestingController.class.getResource("/is/vidmot/stadfestingEyda-dialog.fxml"));
+			FXMLLoader loader = new FXMLLoader(StadfestingEydaDialogController.class.getResource("/is/vidmot/stadfestingEyda-dialog.fxml"));
 			DialogPane dialogPane = loader.load();
 			Alert stadfesta = new Alert(AlertType.CONFIRMATION);
 			stadfesta.setDialogPane(dialogPane);

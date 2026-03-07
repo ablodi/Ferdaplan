@@ -83,7 +83,7 @@ public class AdalController {
      */
 	@FXML
 	private void onEyda(ActionEvent e) {
-		Optional<ButtonType> result = StadfestingController.birtaGlugga();
+		Optional<ButtonType> result = StadfestingEydaDialogController.birtaGlugga();
 		if(result.isPresent() && result.get() == ButtonType.OK) {
 			fxFerdalisti.getItems().remove(
 					fxFerdalisti.getSelectionModel().getSelectedIndex());

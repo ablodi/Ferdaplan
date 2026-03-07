@@ -21,7 +21,6 @@ public class Ferdaplan {
 			this.ferdalisti.add((new Ferd("SK195","London","15 Janúar")));
 			this.ferdalisti.add((new Ferd("AW102","Paris","5 September")));
 			this.ferdalisti.add((new Ferd("RK217","Frankfurt","28 Febrúar")));
-			System.out.println("Ferdaplan constructor notaður");
 	}
 	
 	public ObservableList<Ferd> getListi () {
