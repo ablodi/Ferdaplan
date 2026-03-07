@@ -6,8 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /******************************************************************************
- *  Nafn    :
- *  T-póstur:
+ *  Nafn    : Kristinn Freyr Óskarsson
+ *  T-póstur: kfo3@hi.is
  *  Lýsing  : Beinagreind að Application klasa
  *
  *
