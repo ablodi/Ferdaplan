@@ -9,11 +9,9 @@ import is.vinnsla.Ferdaplan;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /******************************************************************************

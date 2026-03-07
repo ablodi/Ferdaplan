@@ -1,17 +1,12 @@
 package is.vidmot.controller;
 
-import is.vidmot.FerdaplanApp;
 import is.vidmot.switcher.View;
 import is.vidmot.switcher.ViewSwitcher;
 import is.vidmot.view.FerdSpjald;
 import is.vinnsla.Ferd;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class FerdController implements GognInterface<Ferd> {

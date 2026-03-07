@@ -6,7 +6,6 @@ import java.util.Optional;
 import is.vinnsla.Ferd;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ButtonBar;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.DialogPane;
 import javafx.stage.Window;

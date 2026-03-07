@@ -1,7 +1,6 @@
 package is.vidmot;
 
 import is.vidmot.switcher.ViewSwitcher;
-import is.vidmot.view.FerdSpjald;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
