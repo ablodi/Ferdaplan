@@ -10,8 +10,20 @@ import javafx.scene.control.Dialog;
 import javafx.scene.control.DialogPane;
 import javafx.stage.Window;
 
+
+/**
+ * Hjálparklasi sem býr til og birtir dialog til að bæta við nýrri ferð.
+ *
+ * @author Kristinn Óskarsson
+ */
 public class FerdDialogWrapper {
 	
+	/**
+     * Birtir dialog glugga fyrir nýja ferð.
+     *
+     * @param owner eigandi dialog gluggans
+     * @return Optional sem inniheldur ferð ef notandi staðfestir, annars tómt Optional
+     */
 	public static Optional<Ferd> birtaDialog(Window owner) {
 		
 		// setur upp FXML loader

@@ -14,13 +14,12 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
-/******************************************************************************
- *  Nafn    :
- *  T-póstur:
- *  Lýsing  : Controller eða stýring fyrir notendaviðmótið
+/**
+ * Controller fyrir aðalviðmót forritsins.
+ * Sér um að birta lista af ferðum, skoða valda ferð, bæta við ferð og eyða ferð.
  *
- *
- *****************************************************************************/
+ * @author Kristinn Óskarsson
+ */
 public class AdalController {
 	
     @FXML
@@ -35,7 +34,10 @@ public class AdalController {
 	private static final Ferdaplan ferdaplan = new Ferdaplan();
 	
 	
-	
+	/**
+     * Frumstillir controllerinn, tengir ferðalistann við viðmótið
+     * og virkjar/óvirkjar hnappa eftir vali notanda.
+     */
 	public void initialize() {
 		fxFerdalisti.setItems(ferdaplan.getListi());
 		fxSkoda.disableProperty().bind(
@@ -44,6 +46,11 @@ public class AdalController {
 				fxFerdalisti.getSelectionModel().selectedItemProperty().isNull());
 	}
 	
+	/**
+     * Opnar sýn fyrir valda ferð.
+     *
+     * @param e atburður frá hnappi
+     */
 	@FXML
 	private void onSkoda(ActionEvent e) {
 		Ferd f = fxFerdalisti.getSelectionModel().getSelectedItem();
@@ -54,6 +61,12 @@ public class AdalController {
 		// Breyti stærðinni á glugganum eftir að ég ýti á skoða
 		stage.setHeight(185.0); stage.setWidth(310.0); stage.centerOnScreen();
 	}
+	
+	/**
+     * Birtir glugga til að bæta nýrri ferð við listann.
+     *
+     * @param e atburður frá hnappi
+     */
 	@FXML
 	private void onBaetaVid(ActionEvent e) {
 		Optional<Ferd> result = FerdDialogWrapper.birtaDialog(
@@ -62,6 +75,12 @@ public class AdalController {
 			if(f.erValid()) ferdaplan.getListi().add(f);
 		});
 	}
+	
+	/**
+     * Eyðir valinni ferð eftir staðfestingu frá notanda.
+     *
+     * @param e atburður frá hnappi
+     */
 	@FXML
 	private void onEyda(ActionEvent e) {
 		Optional<ButtonType> result = StadfestingController.birtaGlugga();

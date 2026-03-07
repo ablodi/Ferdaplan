@@ -9,12 +9,17 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.DialogPane;
 
+/**
+ * Hjálparklasi sem birtir staðfestingarglugga áður en ferð er eytt.
+ *
+ * @author Kristinn Óskarsson
+ */
 public class StadfestingController {
 	
 	/**
 	 * Nota Alert fyrir staðfestingu á því að eyða
 	 * Hleð dialog fxml skránni inn í Alert
-	 * @return Skila ButtonType OK eða CANCEL
+	 * @return Skila Optional með ButtonType sem segir val notanda
 	 */
 	public static Optional<ButtonType> birtaGlugga() {
 		try {

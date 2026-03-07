@@ -8,6 +8,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * Sérsniðinn JavaFX-viðmótshluti fyrir gögn einnar ferðar.
+ * Inniheldur textasvið fyrir heiti, áfangastað og dagsetningu.
+ *
+ * @author Kristinn Óskarsson
+ */
 public class FerdSpjald extends AnchorPane {
 
 	@FXML
@@ -19,7 +25,9 @@ public class FerdSpjald extends AnchorPane {
 	@FXML
 	private TextField fxDagsetning;
 	
-	
+	/**
+     * Býr til nýtt ferðaspjald og hleður inn tilheyrandi FXML-skrá.
+     */
 	public FerdSpjald() {
 		FXMLLoader fxmlLoader = new FXMLLoader(FerdSpjald.class.getResource("/is/vidmot/view/ferdSpjald-view.fxml"));
 		fxmlLoader.setRoot(this);

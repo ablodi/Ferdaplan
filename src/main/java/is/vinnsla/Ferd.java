@@ -2,11 +2,24 @@ package is.vinnsla;
 
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * Gagnaklasi sem lýsir einni ferð í ferðaplani.
+ * Ferð geymir heiti, áfangastað og dagsetningu sem JavaFX-eiginleika.
+ *
+ * @author Kristinn Óskarsson
+ */
 public class Ferd {
 	SimpleStringProperty heitiFerdar = new SimpleStringProperty("");
 	SimpleStringProperty afangastadur = new SimpleStringProperty("");
 	SimpleStringProperty dagsetning = new SimpleStringProperty("");
 	
+	/**
+     * Býr til ferð með uppgefnu heiti, áfangastað og dagsetningu.
+     *
+     * @param heitiFerdar heiti ferðar
+     * @param afangastadur áfangastaður ferðar
+     * @param dagsetning dagsetning ferðar
+     */
 	public Ferd(String heitiFerdar, String afangastadur, String dagsetning) {
 		this.heitiFerdar.set(heitiFerdar);
 		this.afangastadur.set(afangastadur);

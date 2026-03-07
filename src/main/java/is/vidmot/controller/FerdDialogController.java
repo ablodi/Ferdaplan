@@ -8,6 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 
+/**
+ * Controller fyrir dialog sem er notaður til að fylla út nýja ferð.
+ * Tengir textasvið við FerdSpjald og sér um að staðfesta inntak.
+ *
+ * @author Kristinn Óskarsson
+ */
 public class FerdDialogController implements GognInterface<Ferd> {
 	
 	@FXML

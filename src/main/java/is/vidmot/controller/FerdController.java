@@ -9,18 +9,22 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
+/**
+ * Controller fyrir ferðasýnina.
+ * Tekur við ferðargögnum og birtir þau í FerdSpjald viðmótshlutanum.
+ *
+ * @author Kristinn Óskarsson
+ */
 public class FerdController implements GognInterface<Ferd> {
 	@FXML
 	private FerdSpjald fxFerdSpjald;
 	private Ferd ferd;
-    /**
-     * Frumstillir controllerinn
+   
+	 /**
+     * Setur ferðargögn inn í viðmótið.
+     *
+     * @param f ferðin sem á að birta
      */
-    public void initialize() {
-        // Búa til nýja senu með rótinni af viðmótstrénu
-    //    sena = new Scene (fxHeiti.getParent().getParent().getParent());
-    }
-
 	@Override
 	public void setGogn(Ferd f) {
 		
@@ -30,7 +34,11 @@ public class FerdController implements GognInterface<Ferd> {
 		fxFerdSpjald.dagsetningProperty().bind(f.dagsetningProperty());
 	}
 	
-	
+	/**
+     * Skiptir aftur yfir í aðalviðmótið.
+     *
+     * @param e atburður frá hnappi
+     */
 	@FXML
 	private void onAdal(ActionEvent e) {
 		Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
