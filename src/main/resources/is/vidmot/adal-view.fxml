@@ -11,11 +11,11 @@ Notendaviðmót fyrir grunn
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.vidmot.controller.AdalController">
    <children>
       <ListView fx:id="fxFerdalisti" prefHeight="400.0" prefWidth="200.0" />
-    <AnchorPane layoutX="225.0" layoutY="156.0" minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="150.0">
+    <AnchorPane layoutX="200.0" layoutY="156.0" minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="200.0">
          <children>
-            <Button fx:id="fxSkoda" onAction="#onSkoda" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Skoða" />
-            <Button fx:id="fxBaeta" onAction="#onBaetaVid" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Bæta við" />
-            <Button fx:id="fxEyda" onAction="#onEyda" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Eyða" />
+            <Button fx:id="fxSkoda" alignment="CENTER" layoutX="25.0" mnemonicParsing="false" onAction="#onSkoda" prefHeight="25.0" prefWidth="150.0" text="Skoða" />
+            <Button fx:id="fxBaeta" alignment="CENTER" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#onBaetaVid" prefHeight="25.0" prefWidth="150.0" text="Bæta við" />
+            <Button fx:id="fxEyda" alignment="CENTER" layoutX="25.0" layoutY="60.0" mnemonicParsing="false" onAction="#onEyda" prefHeight="25.0" prefWidth="150.0" text="Eyða" />
          </children>
       </AnchorPane>
    </children>

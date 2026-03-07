@@ -27,7 +27,7 @@ public class FerdaplanApp extends javafx.application.Application {
         // Smíða senuna með notendaviðmótinu sem er núna lesið inn af resources
         Scene scene = new Scene(fxmlLoader.load(), 400, 400);
         // Setja titilinn á gluggann
-        stage.setTitle("Titill");
+        stage.setTitle("Ferðaplan");
         // Tengja senuna við glugggann
         stage.setScene(scene);
         ViewSwitcher.setScene(scene);

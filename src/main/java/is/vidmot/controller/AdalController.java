@@ -56,6 +56,7 @@ public class AdalController {
 		Ferd f = fxFerdalisti.getSelectionModel().getSelectedItem();
 		System.out.println(f + "\n" + View.FERD.getFileName());
 		Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+		stage.setTitle("Ferð");
 		ViewSwitcher.switchTo(View.FERD, false, f);;
 		
 		// Breyti stærðinni á glugganum eftir að ég ýti á skoða
